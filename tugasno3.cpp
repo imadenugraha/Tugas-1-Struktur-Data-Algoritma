@@ -4,7 +4,7 @@ using namespace std;
 int main() {
 
     // Deklarasi variabel yang digunakan
-    int backNumber;
+    int nomorPunggung;
     string posisi1 = "target attacker";
     string posisi2 = "berhak dipilih menjadi target team";
     string posisi3 = "defender";
@@ -13,20 +13,20 @@ int main() {
 
     // Membuat input untuk nomor punggung
     cout << "Masukkkan nomor punggung: ";
-    cin >> backNumber;
+    cin >> nomorPunggung;
 
     // Membuat kondisi untuk menentukan posisi
-    if((backNumber % 2 == 0) && (backNumber >= 50 && backNumber <= 100)) {
+    if((nomorPunggung % 2 == 0) && (nomorPunggung >= 50 && nomorPunggung <= 100)) {
         cout << "Posisi yang dapat dipilih: " << "\n" << posisi1 << "\n"<< posisi2 << endl;
-    } else if(backNumber % 2 == 0) {
+    } else if(nomorPunggung % 2 == 0) {
         cout << "Posisi yang dapat dipilih: " << "\n" << posisi1 << endl;
-    } else if((backNumber % 2 != 0) && (backNumber > 90) && (backNumber % 3 == 0 && backNumber % 5 == 0)) {
+    } else if((nomorPunggung % 2 != 0) && (nomorPunggung > 90) && (nomorPunggung % 3 == 0 && nomorPunggung % 5 == 0)) {
         cout << "Posisi yang dapat dipilih: " << "\n" << posisi3 << "\n" << posisi4 << "\n" << posisi5 << endl;
-    } else if((backNumber % 2 != 0) && (backNumber > 90)) {
+    } else if((nomorPunggung % 2 != 0) && (nomorPunggung > 90)) {
         cout << "Posisi yang dapat dipilih: " << "\n" << posisi3 << "\n" << posisi4 << endl;
-    } else if((backNumber % 2 != 0) && (backNumber % 3 == 0 && backNumber % 5 == 0)) {
+    } else if((nomorPunggung % 2 != 0) && (nomorPunggung % 3 == 0 && nomorPunggung % 5 == 0)) {
         cout << "Posisi yang dapat dipilih: " << "\n" << posisi3 << "\n" << posisi5 << endl;
-    } else if(backNumber % 2 != 0) {
+    } else if(nomorPunggung % 2 != 0) {
         cout << "Posisi yang dapat dipilih: " << "\n" << posisi3 << endl;
     }
 

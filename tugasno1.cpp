@@ -2,45 +2,45 @@
 using namespace std;
 
 // Membuat fungsi untuk melakukan output 
-void Output(string name, string rank) {
-    cout << name << " kemungkinan adalah seorang anggota mafia dengan pangkat" << rank << endl;
+void Output(string nama, string pangkat) {
+    cout << nama << " kemungkinan adalah seorang anggota mafia dengan pangkat" << pangkat << endl;
 }
 
 int main() {
 
     // Deklarasi variabel yang akan digunakan
-    string name, address, rank;
-    int age, totalSavings;
+    string nama, alamat, pangkat;
+    int umur, totalTabungan;
 
     // Menerima input nama
     cout << "Masukkan nama mafia: ";
-    cin >> name;
+    cin >> nama;
 
     // Menerima input umur 
     cout << "Masukkan umur mafia: ";
-    cin >> age;
+    cin >> umur;
 
     // Menerima input tempat tinggal
     cout << "Masukkan daerah tempat tinggal: ";
-    cin >> address;
+    cin >> alamat;
 
     // Menerima input tabungan yang dimiliki
     cout << "Masukkan jumlah tabungan: ";
-    cin >> totalSavings;
+    cin >> totalTabungan;
 
 
     // Membuat percabangan untuk menentukan jenis mafia
-    if((age >= 40) && (address == "Nevada" || address == "NewYork" || address == "Havana") && (totalSavings >= 10000000)){
-        rank = "Don";
-        Output(name, rank);
-    } else if((age >= 25 && age < 40) && (address == "NewJersey" || address == "Manhattan" || address == "Nevada") && (totalSavings >= 1000000 && totalSavings <= 2000000)) {
-        rank = "Underboss";
-        Output(name, rank);
-    } else if((age >= 18 && age < 24) && (address == "California" || address == "Detroit" || address == "Boston") && (totalSavings < 1000000)) {
-        rank = "Capo";
-        Output(name, rank);
+    if((umur >= 40) && (alamat == "Nevada" || alamat == "NewYork" || alamat == "Havana") && (totalTabungan >= 10000000)){
+        pangkat = "Don";
+        Output(nama, pangkat);
+    } else if((umur >= 25 && umur < 40) && (alamat == "NewJersey" || alamat == "Manhattan" || alamat == "Nevada") && (totalTabungan >= 1000000 && totalTabungan <= 2000000)) {
+        pangkat = "Underboss";
+        Output(nama, pangkat);
+    } else if((umur >= 18 && umur < 24) && (alamat == "California" || alamat == "Detroit" || alamat == "Boston") && (totalTabungan < 1000000)) {
+        pangkat = "Capo";
+        Output(nama, pangkat);
     } else {
-        cout << name << " tidak mencurigakan";
+        cout << nama << " tidak mencurigakan";
     }
 
     return 0;

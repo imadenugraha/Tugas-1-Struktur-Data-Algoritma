@@ -2,8 +2,8 @@
 using namespace std;
 
 // Membuat fungsi untuk menampilkan pesan untuk hasil skor
-void resultMsg(string result) {
-    if(result == "LOLOS" || result == "DIPERTIMBANGKAN") {
+void hasilMsg(string hasil) {
+    if(hasil == "LOLOS" || hasil == "DIPERTIMBANGKAN") {
         cout << "Selamat Kamu Berhasil Menjadi Calon Programmer";
     } else {
         cout << "Maaf Kamu Belum Berhasil Menjadi Calon Programmer";
@@ -14,33 +14,33 @@ void resultMsg(string result) {
 int main() {
 
     // Deklarasi variabel yang akan digunakan
-    int codingScore;
-    string interviewScore, result; 
+    int skorCoding;
+    string skorInterview, hasil; 
 
-    // Membuat input untuk codingScore
+    // Membuat input untuk skorCoding
     cout << "Masukkan skor Coding: ";
-    cin >> codingScore;
+    cin >> skorCoding;
 
-    // Membuat input untuk interviewScore
+    // Membuat input untuk skorInterview
     cout << "Masukkan skor Interview: ";
-    cin >> interviewScore;
+    cin >> skorInterview;
 
     // Membuat kondisi untuk menentukan status test
-    if(codingScore > 80 && (interviewScore == "A" || interviewScore == "B")) {
-        result = "LOLOS";
-        resultMsg(result);
-    } else if(codingScore > 80 && (interviewScore != "A" || interviewScore != "B")) {
-        result = "GAGAL";
-        resultMsg(result);
-    } else if((codingScore >= 60 && codingScore <= 80) && (interviewScore == "A" || interviewScore == "B")) {
-        result = "DIPERTIMBANGKAN";
-        resultMsg(result);
-    } else if((codingScore >= 60 && codingScore <= 80) && (interviewScore != "A" || interviewScore != "B")) {
-        result = "GAGAL";
-        resultMsg(result);
-    } else if(codingScore < 60 && (interviewScore != "A" || interviewScore != "B")) {
-        result = "GAGAL";
-        resultMsg(result);
+    if(skorCoding > 80 && (skorInterview == "A" || skorInterview == "B")) {
+        hasil = "LOLOS";
+        hasilMsg(hasil);
+    } else if(skorCoding > 80 && (skorInterview != "A" || skorInterview != "B")) {
+        hasil = "GAGAL";
+        hasilMsg(hasil);
+    } else if((skorCoding >= 60 && skorCoding <= 80) && (skorInterview == "A" || skorInterview == "B")) {
+        hasil = "DIPERTIMBANGKAN";
+        hasilMsg(hasil);
+    } else if((skorCoding >= 60 && skorCoding <= 80) && (skorInterview != "A" || skorInterview != "B")) {
+        hasil = "GAGAL";
+        hasilMsg(hasil);
+    } else if(skorCoding < 60 && (skorInterview != "A" || skorInterview != "B")) {
+        hasil = "GAGAL";
+        hasilMsg(hasil);
     }
 
     return 0;

@@ -4,25 +4,25 @@ using namespace std;
 int main() {
 
     // Deklarasi variabel yang akan digunakan
-    int exerciseType;
+    int jenisOlahraga;
     char input;
 
-    int totalCalories = 0;
+    int totalKalori = 0;
 
     // Menggunakan perulangan do-while agar user dapat menginput lagi
     do {
 
     // Membuat input untuk jenis olahraga
     cout << "Masukkan jenis olahraga: " << "\n" << "1. Lari" << "\n" << "2. Push Up" << "\n" << "3. Plank" << "\n" << ">> ";
-    cin >> exerciseType;
+    cin >> jenisOlahraga;
 
     // Membuat kondisi untuk menentukan kalori
-    if(exerciseType == 1) {
-        totalCalories += 60;
-    } else if(exerciseType == 2) {
-        totalCalories += 200;
-    } else if(exerciseType == 3) {
-        totalCalories += 5;
+    if(jenisOlahraga == 1) {
+        totalKalori += 60;
+    } else if(jenisOlahraga == 2) {
+        totalKalori += 200;
+    } else if(jenisOlahraga == 3) {
+        totalKalori += 5;
     } else {
         cout << "Olahraga tidak sesuai!";
     }
@@ -32,7 +32,7 @@ int main() {
     cin >> input;
 
     } while(input == 'Y' || input == 'y');
-    cout << "Total Kalori: " << totalCalories;
+    cout << "Total Kalori: " << totalKalori;
 
     return 0;
 }
